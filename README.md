@@ -1,7 +1,7 @@
 # klipper-led
 
 ## Wiring Instuctions
-Wire data pin to GPIO 18, PCM_CLK pin on the raspberr PI. Make sure you share a common ground to the LEDs or they wont properly light. LEDs data in/out must be wired in series.
+Wire data pin to GPIO 18, PCM_CLK pin on the raspberry PI. Make sure you share a common ground to the LEDs or they wont properly light. LEDs data in/out must be wired in series.
 
 If you have a large amount of LEDs you should wire 5V seperately.
 
