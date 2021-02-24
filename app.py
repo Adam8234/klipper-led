@@ -21,6 +21,28 @@ class STATE(enum.Enum):
     PRINTING = 3
 
 
+leds = [
+    {
+        # Index of first led starting from zero (for example: index 0-15 will be taken with this led strand)
+        'index': 0,
+        'led_count': 16,
+        'led_type': LED_PROGRESS.PROGRESS,
+        'main_color': (0, 255, 0)  # RGB
+    },
+    {
+        'index': 16,  # Index of first led starting from zero
+        'led_count': 16,
+        'led_type': LED_PROGRESS.HEATER_BED,
+        'main_color': (255, 0, 0)  # RGB
+    },
+    {
+        'index': 32,  # Index of first led starting from zero
+        'led_count': 16,
+        'led_type': LED_PROGRESS.EXTRUDER,
+        'main_color': (0, 0, 255)  # RGB
+    }
+]
+
 global brightness_direction
 
 state_startup_brightness_direction = float(-0.025)
@@ -38,26 +60,6 @@ state_virual_sdcard_progress = 0.0
 
 state = STATE.START_UP
 
-leds = [
-    {
-        'index': 0,
-        'led_count': 16,
-        'led_type': LED_PROGRESS.PROGRESS,
-        'main_color': (255, 0, 0)
-    },
-    {
-        'index': 16,
-        'led_count': 16,
-        'led_type': LED_PROGRESS.HEATER_BED,
-        'main_color': (0, 255, 0)
-    },
-    {
-        'index': 32,
-        'led_count': 16,
-        'led_type': LED_PROGRESS.EXTRUDER,
-        'main_color': (0, 255, 0)
-    }
-]
 
 total_leds = 0
 for led in leds:

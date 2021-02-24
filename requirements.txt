@@ -1,0 +1,3 @@
+requests==2.25.1
+rpi_ws281x=4.2.5
+adafruit-circuitpython-neopixel=6.0.2

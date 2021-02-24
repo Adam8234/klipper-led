@@ -5,6 +5,7 @@ SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Use Klippers env
 [ ! -d ${PYTHONDIR} ] && virtualenv -p python3 ${PYTHONDIR}
+${PYTHONDIR}/bin/pip install -r requirements.txt
 
 sudo /bin/sh -c "cat > $SYSTEMDDIR/klipperled.service" << EOF
 #Systemd service file for klipper
